@@ -1,0 +1,86 @@
+@use '../abstracts/abstract__helpers' as *;
+@use '../base/base__helpers' as *;
+
+.Profession-container-2{
+    height: 55px;
+}
+
+.profession-item-row{
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    .profession-item{
+p{
+    @include flex-row;
+    align-items: center;
+    gap: 6px;
+    color: #151515;
+font-family: "Suisse Intl";
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 135.714%; /* 1.62856rem */
+text-transform: uppercase;
+}
+    }
+}
+
+.Profession-container{
+    .Profession-container-wrapper{
+        height: 55px;
+		position: relative;
+		overflow-x: hidden;
+		background: var(--color-black);
+		.marque-container {
+			width: 100%;
+			height: 100%;
+			@include flex-row;
+			align-items: center;
+			white-space: nowrap;
+			will-change: transform;
+			animation: marquee 45s linear infinite;
+			position: absolute;
+			-webkit-animation: marquee 45s linear infinite;
+
+			.marquee-item {
+				@include flex-row;
+				align-items: center;
+				.title {
+					color: #c6c6c6;
+					text-align: center;
+
+					font-size: 1.125rem;
+					font-style: normal;
+					font-weight: 500;
+					line-height: normal;
+					text-transform: uppercase;
+					@include flex-row;
+					align-items: center;
+					width: 130px;
+					height: 100%;
+					justify-content: center;
+				}
+			}
+		}
+    }
+}
+
+
+@keyframes marquee {
+	from {
+		transform: translateX(-391.5%);
+		-webkit-transform: translateX(-391.5%);
+		-moz-transform: translateX(-391.5%);
+		-ms-transform: translateX(-391.5%);
+		-o-transform: translateX(-391.5%);
+	}
+	to {
+		transform: translateX(0);
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+	}
+}

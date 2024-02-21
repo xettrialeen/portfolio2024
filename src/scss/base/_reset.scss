@@ -1,0 +1,188 @@
+@use './typography' as *;
+@use '../abstracts/_mixins' as *;
+:root {
+}
+[data-theme='dark'] {
+}
+// @use "../abstracts/variables" as *;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	// border: 1px solid red;
+	font-family: $font;
+}
+
+.main-width-center {
+	width: 100%;
+	@include flex-row;
+	justify-content: center;
+	@include mq('max', '1500px') {
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+	.width-1500 {
+		width: 1500px;
+
+		@include mq('max', '1500px') {
+			width: 100%;
+			// overflow: hidden;
+		}
+	}
+}
+
+.content-center {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+a {
+	cursor: url('./src/scss/font/cursor.svg'), auto;
+}
+
+.custom-cursor {
+	cursor: url('./src/scss/font/cursor.svg'), auto;
+}
+
+.primary-active {
+	color: #9f24ff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.secondary-active {
+	background-color: #fff824 !important;
+}
+.icon-svg {
+	&:hover {
+		svg {
+			transform: rotate(6deg);
+			-webkit-transform: rotate(6deg);
+			-moz-transform: rotate(6deg);
+			-ms-transform: rotate(6deg);
+			-o-transform: rotate(6deg);
+			@include trans(transform);
+		}
+	}
+	svg {
+		transform: translateY(10px);
+		-webkit-transform: translateY(10px);
+		-moz-transform: translateY(10px);
+		-ms-transform: translateY(10px);
+		-o-transform: translateY(10px);
+		@include trans(transform);
+	}
+}
+
+.img-absolute {
+	position: relative;
+
+	&:hover {
+		.profile-image-mask {
+			transform: translateY(-210px);
+			-webkit-transform: translateY(-210px);
+			-moz-transform: translateY(-210px);
+			-ms-transform: translateY(-210px);
+			-o-transform: translateY(-210px);
+			visibility: visible;
+			opacity: 1;
+
+			transition:
+				opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+				transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+			-webkit-transition:
+				opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+				transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+			-moz-transition:
+				opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+				transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+			-ms-transition:
+				opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+				transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+			-o-transition:
+				opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+				transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		}
+	}
+	.profile-image-mask {
+		visibility: hidden;
+		opacity: 0;
+		position: absolute;
+		z-index: -1;
+		width: 87px;
+		height: 87px;
+		@include flex-row;
+		align-items: center;
+		justify-content: center;
+		background-color: #ffffff;
+		@include radius(50%);
+		border: 3px solid var(--color-black);
+		img {
+			height: 77px;
+			width: 77px;
+			object-fit: cover;
+			@include radius(100%);
+		}
+		transform: translateY(-200px);
+		-webkit-transform: translateY(-200px);
+		-moz-transform: translateY(-200px);
+		-ms-transform: translateY(-200px);
+		-o-transform: translateY(-200px);
+		transition:
+			opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+			transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		-webkit-transition:
+			opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+			transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		-moz-transition:
+			opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+			transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		-ms-transition:
+			opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+			transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+		-o-transition:
+			opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s,
+			transform 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	}
+}
+
+.text-xl {
+	font-size: 5.25rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 135.714%;
+	font-weight: bold;
+	letter-spacing: -0.125rem;
+	text-transform: uppercase;
+
+	@include mq('max', '1149px') {
+		font-size: 4rem;
+	}
+
+	@include mq('max', '469px') {
+		font-size: 3rem;
+	
+	}
+}
+.border-l {
+	border-left: 4px solid var(--color-black);
+}
+.border-l {
+	border-left: 4px solid var(--color-black);
+}
+.border-r {
+	border-right: 4px solid var(--color-black);
+}
+.border-t {
+	border-top: 4px solid var(--color-black);
+}
+.border-b {
+	border-bottom: 4px solid var(--color-black);
+}

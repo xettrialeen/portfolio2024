@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'sushi';
+	src: url('../font/SuisseIntl-Medium.otf') format('Otf');
+	/* Add additional formats if needed */
+}
+
+$font: 'Suisse Intl', sans-serif;
+
+:root,
+::before,
+::after {
+	--font-max-size: 7.5vw;
+	--font-max-line: 0.89;
+	--font-max-letter: -0.04em;
+	--font-xl-size: 5.833vw;
+	--font-xl-line: 0.93;
+	--font-xl-letter: -0.03em;
+	--font-lg-size: 3.75vw;
+	--font-lg-line: 0.96;
+	--font-lg-letter: -0.03em;
+	--font-3md-size: 2.5vw;
+	--font-3md-line: 1;
+	--font-3md-letter: -0.02em;
+	--font-2md-size: 2.083vw;
+	--font-2md-line: 1;
+	--font-2md-letter: -0.02em;
+	--font-md-size: 1.667vw;
+	--font-md-line: 0.94;
+	--font-md-letter: -0.02em;
+	--font-base-size: 1.25vw;
+	--font-base-line: 1;
+	--font-base-letter: -0.02em;
+	--font-base-size-p: 1.25vw;
+	--font-base-line-p: 1.17;
+	--font-base-letter-p: -0.03em;
+	--font-xs-size: 0.833vw;
+	--font-xs-line: 1.17;
+	--font-xs-letter: -0.01em;
+	--wrapper-padding: 2rem;
+	--divider-inner-height: 1.597vw;
+	--content-spacing-x: 0.833vw;
+	--content-spacing-y: 0.972vw;
+	--line: 0.278vw;
+	--section-pt: 3.056vw;
+	--project-spacing-t: 2.361vw;
+	--project-spacing-b: 13.889vw;
+
+	--color-black: #151515;
+	--color-error: #e90000;
+	--color-gray: #fafafa;
+	--color-gray-blue: #c5cbd1;
+	--color-gray-dark: #a5adb6;
+	--color-gray-90: #e5e5e5;
+	--color-white: #ffffff;
+	--color-yellow: #FEF857;
+}
+
+body {
+	// font-size: var(--font-base-size);
+	// line-height: var(--font-base-line);
+	// letter-spacing: var(--font-base-letter);
+	-webkit-font-smoothing: antialiased;
+	background-color: var(--color-gray);
+}
+

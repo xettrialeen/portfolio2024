@@ -1,0 +1,163 @@
+@mixin trans($name) {
+	transition:
+		$name,
+		0.3s ease-in-out;
+	-webkit-transition:
+		$name,
+		0.3s ease-in-out;
+	-moz-transition:
+		$name,
+		0.3s ease-in-out;
+	-ms-transition:
+		$name,
+		0.3s ease-in-out;
+	-o-transition:
+		$name,
+		0.3s ease-in-out;
+}
+@mixin transMul($first, $second) {
+	transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out;
+	-webkit-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out;
+	-moz-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out;
+	-ms-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out;
+	-o-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out;
+}
+@mixin transTrip($first, $second, $third) {
+	transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out,
+		$third,
+		0.3s ease-in-out;
+	-webkit-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out,
+		$third,
+		0.3s ease-in-out;
+	-moz-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out,
+		$third,
+		0.3s ease-in-out;
+	-ms-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out,
+		$third,
+		0.3s ease-in-out;
+	-o-transition:
+		$first,
+		0.3s ease-in-out,
+		$second,
+		0.3s ease-in-out,
+		$third,
+		0.3s ease-in-out;
+}
+
+@mixin imageFunc($height, $width) {
+	height: $height;
+	width: $width;
+}
+
+@mixin font($weight, $color) {
+	font-weight: $weight;
+	color: $color;
+}
+// @mixin font($size,$weight,$color){
+//   font-size: $size;
+//   font-weight: $weight;
+//   color: $color;
+
+// }
+
+// ** this is a media queries
+@mixin mq($type, $value) {
+	@media screen and (#{$type}-width:$value) {
+		@content;
+	}
+}
+
+@mixin flex-colum() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin same-hw($data) {
+	height: $data;
+	width: $data;
+}
+
+@mixin flex-row() {
+	display: flex;
+	flex-direction: row;
+}
+
+@mixin justify-center-flex() {
+	display: flex;
+	justify-content: center;
+}
+@mixin center-flex() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flex-row__center() {
+	align-items: center;
+}
+
+@mixin position__center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+@mixin padding__basic {
+	padding: 0px 80px 0px 80px;
+}
+
+@mixin radius($data) {
+	border-radius: $data;
+	-webkit-border-radius: $data;
+	-moz-border-radius: $data;
+	-ms-border-radius: $data;
+	-o-border-radius: $data;
+}
+
+@mixin y($data) {
+	transform: translateY($data);
+	-webkit-transform: translateY($data);
+	-moz-transform: translateY($data);
+	-ms-transform: translateY($data);
+	-o-transform: translateY($data);
+}

@@ -7,7 +7,7 @@
 	import devSimplify from '../../../assets/portfilio/devSimplify.png';
 	import debugmatic from '../../../assets/portfilio/debugmatic.png';
 	import htmlToFigma from '../../../assets/portfilio/htmlToFigma1.png';
-	
+
 	import { onMount, onDestroy, afterUpdate } from 'svelte';
 
 	import gsap from 'gsap';
@@ -51,9 +51,10 @@
 	//   });
 
 	let pointerEventsChatBar = true;
+	let inputElement;
 	function handleChatOpener() {
 		const tl = gsap.timeline();
-		console.log(tl);
+
 		tl.fromTo(
 			['.chat-animate-container', '.chat-animate-container2'],
 			{
@@ -115,7 +116,13 @@
 				},
 				0
 			);
+
+		setTimeout(()=>{
+			inputElement.focus();
+		},1000)
 	}
+
+
 
 	let userTyped;
 	let messageData = [
@@ -602,6 +609,9 @@
 									on:keyup={handleKeyPress}
 									placeholder="chat with Aleen eg help/"
 									type="text"
+									class="chat-input"
+									id="chat-input"
+									bind:this={inputElement}
 								/>
 								<svg
 									on:click={handleUserTyped}

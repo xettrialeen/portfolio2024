@@ -3,7 +3,12 @@
 	import aleen from '../../../assets/my/aleen.png';
 	import user1 from '../../../assets/portfilio/user1.png';
 	import user2 from '../../../assets/portfilio/user2.png';
-	import { onMount, onDestroy,afterUpdate } from 'svelte';
+	import equitool from '../../../assets/portfilio/equitool.png';
+	import devSimplify from '../../../assets/portfilio/devSimplify.png';
+	import debugmatic from '../../../assets/portfilio/debugmatic.png';
+	import htmlToFigma from '../../../assets/portfilio/htmlToFigma1.png';
+	
+	import { onMount, onDestroy, afterUpdate } from 'svelte';
 
 	import gsap from 'gsap';
 	import { responseMessages, responses } from '$lib/utility/chat';
@@ -16,7 +21,6 @@
 	let index = 0;
 	let isChat = true;
 	onMount(() => {
-
 		handleScroll();
 		const interval = setInterval(() => {
 			if (index < words.length) {
@@ -123,80 +127,75 @@
 					nodeName: 'p'
 				}
 			]
-		},
-		
+		}
 	];
 
-	
-
 	function getResponse(userInput) {
-    userInput = userInput.toLowerCase(); // Normalize the input to lowercase for matching
-    let response = "<p>Sorry, I don't understand that. Can you try asking in a different way?</p>"; // Default response
+		userInput = userInput.toLowerCase(); // Normalize the input to lowercase for matching
+		let response = "<p>Sorry, I don't understand that. Can you try asking in a different way?</p>"; // Default response
 
-    // Search for a keyword match in the user input
-    for (const [key, value] of Object.entries(responses)) {
-        if (userInput.includes(key)) {
-            response = value;
-            break; // Stop searching once a match is found
-        }
-    }
+		// Search for a keyword match in the user input
+		for (const [key, value] of Object.entries(responses)) {
+			if (userInput.includes(key)) {
+				response = value;
+				break; // Stop searching once a match is found
+			}
+		}
 
-    return response;
-}
+		return response;
+	}
 
-function handleUserTyped() {
-    if (userTyped) {
-        let botResponse = '<p>Sorry, I do not understand that. Can you try asking differently?</p>'; // Default response
+	function handleUserTyped() {
+		if (userTyped) {
+			let botResponse = '<p>Sorry, I do not understand that. Can you try asking differently?</p>'; // Default response
 
-        // Iterate over each response type to find a match
-        Object.keys(responses).forEach((responseKey) => {
-            responses[responseKey].forEach((phrase) => {
-                if (userTyped.toLowerCase().includes(phrase)) {
-                    botResponse = responseMessages[responseKey];
-                }
-            });
-        });
+			// Iterate over each response type to find a match
+			Object.keys(responses).forEach((responseKey) => {
+				responses[responseKey].forEach((phrase) => {
+					if (userTyped.toLowerCase().includes(phrase)) {
+						botResponse = responseMessages[responseKey];
+					}
+				});
+			});
 
-        // Add user message immediately
-        messageData = [
-            ...messageData,
-            {
-                userName: 'user',
-                message: [
-                    {
-                        data: `<p>${sanitizeAndValidateInput(userTyped).sanitizedInput}</p>`,
-                        nodeName: 'p'
-                    }
-                ]
-            }
-        ];
+			// Add user message immediately
+			messageData = [
+				...messageData,
+				{
+					userName: 'user',
+					message: [
+						{
+							data: `<p>${sanitizeAndValidateInput(userTyped).sanitizedInput}</p>`,
+							nodeName: 'p'
+						}
+					]
+				}
+			];
 
-        // Delay Aleen's response
-        setTimeout(() => {
-            messageData = [
-                ...messageData,
-                // Add bot response after a delay
-                {
-                    userName: 'aleen', // Assuming 'aleen' is the bot's username
-                    message: [
-                        {
-                            data: botResponse,
-                            nodeName: 'p'
-                        }
-                    ]
-                }
-            ];
+			// Delay Aleen's response
+			setTimeout(() => {
+				messageData = [
+					...messageData,
+					// Add bot response after a delay
+					{
+						userName: 'aleen', // Assuming 'aleen' is the bot's username
+						message: [
+							{
+								data: botResponse,
+								nodeName: 'p'
+							}
+						]
+					}
+				];
 
-            // Update the UI here if necessary to display the new message
-            // For example, you might call a function to refresh the chat display
-            // refreshChatDisplay();
+				// Update the UI here if necessary to display the new message
+				// For example, you might call a function to refresh the chat display
+				// refreshChatDisplay();
+			}, 700); // Delay of 2000 milliseconds (2 seconds)
 
-        }, 700); // Delay of 2000 milliseconds (2 seconds)
-
-        userTyped = '';
-    }
-}
-
+			userTyped = '';
+		}
+	}
 
 	function handleKeyPress(event) {
 		if (event.key === 'Enter') {
@@ -204,27 +203,26 @@ function handleUserTyped() {
 		}
 	}
 
-
 	let scrollToBottom = true; // Reactive variable to control auto-scrolling
 
-  // Function to handle scroll-to-bottom logic
-  function handleScroll() {
-    const container = document.querySelector('.chat-box-container-data');
-    if (container) {
-      // If the scroll position is near the bottom, enable auto-scrolling
-      scrollToBottom = container.scrollHeight - container.clientHeight <= container.scrollTop + 1;
-    }
-  }
+	// Function to handle scroll-to-bottom logic
+	function handleScroll() {
+		const container = document.querySelector('.chat-box-container-data');
+		if (container) {
+			// If the scroll position is near the bottom, enable auto-scrolling
+			scrollToBottom = container.scrollHeight - container.clientHeight <= container.scrollTop + 1;
+		}
+	}
 
-  // Scroll to bottom function
-  function scrollToBottomIfNeeded() {
-    if (scrollToBottom) {
-      const container = document.querySelector('.chat-box-container-data');
-      if (container) {
-        container.scrollTop = container.scrollHeight;
-      }
-    }
-  }
+	// Scroll to bottom function
+	function scrollToBottomIfNeeded() {
+		if (scrollToBottom) {
+			const container = document.querySelector('.chat-box-container-data');
+			if (container) {
+				container.scrollTop = container.scrollHeight;
+			}
+		}
+	}
 </script>
 
 <section class="Hero-Section main-width-center">
@@ -532,10 +530,12 @@ function handleUserTyped() {
 
 			<div class="chat-bar">
 				<div class="chat-bar-wrapper">
-					<div class="chat-bar-container" 	style={`${!pointerEventsChatBar ? 'pointer-events:all' : 'pointer-events:none'}`}>
-					
+					<div
+						class="chat-bar-container"
+						style={`${!pointerEventsChatBar ? 'pointer-events:all' : 'pointer-events:none'}`}
+					>
 						<div class="chat-box-container">
-							<div class="chat-box-container-data " on:scroll={handleScroll}>
+							<div class="chat-box-container-data" on:scroll={handleScroll}>
 								{#each messageData as user}
 									{#if user.userName === 'aleen'}
 										<div class="chat-item">
@@ -557,10 +557,40 @@ function handleUserTyped() {
 										</div>
 									{/if}
 								{/each}
-								<!-- <div class="chat-item chat-item-2">
-									<img src={user2} alt="" />
+								<!-- <div class="chat-item">
+									<img src={user1} alt="" />
 									<div class="content-field">
 										<p>“ Today is a gift that’s why it is called present”</p>
+										<section class="image-link">
+											<div class="link-item">
+												<img src={debugmatic} alt="" />
+												<div class="link-title">
+													<h3>Debugmatic</h3>
+													<a href="#">Link</a>
+												</div>
+											</div>
+											<div class="link-item">
+												<img src={htmlToFigma} alt="" />
+												<div class="link-title">
+													<h3>Html To Figma</h3>
+													<a href="#">Link</a>
+												</div>
+											</div>
+											<div class="link-item">
+												<img src={equitool} alt="" />
+												<div class="link-title">
+													<h3>Equitool</h3>
+													<a href="#">Link</a>
+												</div>
+											</div>
+											<div class="link-item">
+												<img src={devSimplify} alt="" />
+												<div class="link-title">
+													<h3>Sveltekit + Blogger Template</h3>
+													<a href="#">Link</a>
+												</div>
+											</div>
+										</section>
 									</div>
 								</div> -->
 							</div>

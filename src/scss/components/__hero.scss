@@ -204,11 +204,11 @@
 								// background-color: #fafafa;
 								display: flex;
 								flex-direction: column;
-						
+
 								justify-content: flex-end;
 								.chat-box-container-data {
 									width: 100%;
-								
+
 									padding-left: 24px;
 									padding-right: 24px;
 									// padding-bottom: 47px;
@@ -217,40 +217,31 @@
 									// background-color: #230b35;
 									// color: #fff;
 
-									
-								
-								
-								
-
-									height: auto ;
+									height: auto;
 
 									&::-webkit-scrollbar {
 										width: 5px;
-									  }
-									  
-									  /* Track */
-									  &::-webkit-scrollbar-track {
+									}
+
+									/* Track */
+									&::-webkit-scrollbar-track {
 										border-radius: 10px;
 										-webkit-border-radius: 10px;
 										-moz-border-radius: 10px;
 										-ms-border-radius: 10px;
 										-o-border-radius: 10px;
-}
-									   
-									  /* Handle */
-									  &::-webkit-scrollbar-thumb {
-										background: #dbd420; 
-										border-radius: 10px;
-									  }
-									  
-									  /* Handle on hover */
-									  &::-webkit-scrollbar-thumb:hover {
-										background: transparent ;
-									  }
-								
-									
+									}
 
-								
+									/* Handle */
+									&::-webkit-scrollbar-thumb {
+										background: #dbd420;
+										border-radius: 10px;
+									}
+
+									/* Handle on hover */
+									&::-webkit-scrollbar-thumb:hover {
+										background: transparent;
+									}
 
 									@keyframes slideIn {
 										0% {
@@ -267,8 +258,6 @@
 										}
 									}
 
-									
-
 									.chat-item {
 										animation: slideIn 0.5s cubic-bezier(0.1, -0.6, 0.2, 1) forwards;
 										-webkit-animation: slideIn 0.5s cubic-bezier(0.1, -0.6, 0.2, 1) forwards;
@@ -278,7 +267,7 @@
 										@include flex-row;
 										align-items: start;
 										gap: 16px;
-										margin-bottom:  47px;
+										margin-bottom: 47px;
 										.content-field {
 											width: auto;
 											border: 2px solid #000;
@@ -295,6 +284,96 @@
 											p {
 												text-align: left;
 											}
+
+
+											:global(.image-link) {
+												width: 100%;
+												margin-top: 24px;
+												display: grid;
+												grid-template-columns: 1fr 1fr;
+												gap: 10px;
+											}
+											
+											:global(.image-link .link-item img) {
+												border: 1px solid #151515;
+												width: 100%;
+												height: 178px;
+												margin-bottom: 6px;
+												object-fit: cover;
+											}
+											
+											:global(.image-link .link-item .link-title) {
+												display: flex;
+												justify-content: space-between;
+											}
+											
+											:global(.image-link .link-item .link-title h3) {
+												color: rgba(0, 0, 0, 0.61);
+												font-family: 'Suisse Intl';
+												font-size: 0.875rem;
+												font-style: normal;
+												font-weight: 500;
+												line-height: 1.6875rem; /* 192.857% */
+												text-transform: uppercase;
+											}
+											
+											:global(.image-link .link-item .link-title a) {
+												color: #230b35;
+												text-align: right;
+												font-family: 'Suisse Intl';
+												font-size: 0.875rem;
+												font-style: normal;
+												font-weight: 500;
+												line-height: 1.6875rem; /* 192.857% */
+												text-decoration-line: underline;
+											}
+											
+
+											// :global(p) {
+											// 	/* global styles here */
+											// 	text-align: end;
+											// }
+											// .image-link {
+											// 	width: 100%;
+											// 	margin-top: 24px;
+											// 	display: grid;
+											// 	grid-template-columns: 1fr 1fr;
+											// 	gap: 10px;
+
+											// 	.link-item {
+											// 		img {
+											// 			border: 1px solid #151515;
+											// 			width: 100%;
+											// 			height: 178px;
+											// 			margin-bottom: 6px;
+											// 			object-fit: cover;
+											// 		}
+											// 		.link-title {
+											// 			@include flex-row;
+											// 			justify-content: space-between;
+											// 			h3 {
+											// 				color: rgba(0, 0, 0, 0.61);
+											// 				font-family: 'Suisse Intl';
+											// 				font-size: 0.875rem;
+											// 				font-style: normal;
+											// 				font-weight: 500;
+											// 				line-height: 1.6875rem; /* 192.857% */
+											// 				text-transform: uppercase;
+											// 			}
+
+											// 			a {
+											// 				color: #230b35;
+											// 				text-align: right;
+											// 				font-family: 'Suisse Intl';
+											// 				font-size: 0.875rem;
+											// 				font-style: normal;
+											// 				font-weight: 500;
+											// 				line-height: 1.6875rem; /* 192.857% */
+											// 				text-decoration-line: underline;
+											// 			}
+											// 		}
+											// 	}
+											// }
 										}
 									}
 

@@ -3,8 +3,10 @@
 	import aleen from '../../../assets/my/aleen.png';
 	import user1 from '../../../assets/portfilio/user1.png';
 	import user2 from '../../../assets/portfilio/user2.png';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount, onDestroy,afterUpdate } from 'svelte';
+
 	import gsap from 'gsap';
+	import { responseMessages, responses } from '$lib/utility/chat';
 	let displayedText = '';
 	const fullText =
 		"“Hello, you're welcome to engage in a conversation with me. I'm not an automated bot, however. I'm adept at following commands. Click to initiate a chat.”";
@@ -13,6 +15,8 @@
 	let index = 0;
 	let isChat = true;
 	onMount(() => {
+
+		handleScroll();
 		const interval = setInterval(() => {
 			if (index < words.length) {
 				displayedText += (index > 0 ? ' ' : '') + words[index];
@@ -23,6 +27,8 @@
 			}
 		}, 50); // Adjust typing speed by changing the interval time
 	});
+
+	afterUpdate(scrollToBottomIfNeeded);
 	// let words = text.split(' ');
 	//   let typedText = readable("", (set) => {
 	//     let index = 0;
@@ -74,7 +80,7 @@
 					y: 200,
 					opacity: 0,
 					duration: 0.6,
-					delay:0.3,
+					delay: 0.3,
 					ease: 'sine.out',
 					stagger: {
 						amount: 0.3,
@@ -85,16 +91,16 @@
 				0
 			)
 			.fromTo(
-				['.chat-box-container','.chat-footer'],
+				['.chat-box-container', '.chat-footer'],
 				{
-					visibility:"hidden",
+					visibility: 'hidden',
 					opacity: 0
 				},
 				{
-					visibility:"visible",
+					visibility: 'visible',
 					opacity: 1,
 					duration: 0.6,
-					delay:0.6,
+					delay: 0.6,
 					ease: 'sine.out',
 					stagger: {
 						amount: 0.3,
@@ -105,6 +111,119 @@
 				0
 			);
 	}
+
+	let userTyped;
+	let messageData = [
+		{
+			userName: 'aleen',
+			message: [
+				{
+					data: '<p>Hi how can i assit you today?</p>',
+					nodeName: 'p'
+				}
+			]
+		},
+		
+	];
+
+	
+
+	function getResponse(userInput) {
+    userInput = userInput.toLowerCase(); // Normalize the input to lowercase for matching
+    let response = "<p>Sorry, I don't understand that. Can you try asking in a different way?</p>"; // Default response
+
+    // Search for a keyword match in the user input
+    for (const [key, value] of Object.entries(responses)) {
+        if (userInput.includes(key)) {
+            response = value;
+            break; // Stop searching once a match is found
+        }
+    }
+
+    return response;
+}
+
+function handleUserTyped() {
+    if (userTyped) {
+        let botResponse = '<p>Sorry, I do not understand that. Can you try asking differently?</p>'; // Default response
+
+        // Iterate over each response type to find a match
+        Object.keys(responses).forEach((responseKey) => {
+            responses[responseKey].forEach((phrase) => {
+                if (userTyped.toLowerCase().includes(phrase)) {
+                    botResponse = responseMessages[responseKey];
+                }
+            });
+        });
+
+        // Add user message immediately
+        messageData = [
+            ...messageData,
+            {
+                userName: 'user',
+                message: [
+                    {
+                        data: `<p>${userTyped}</p>`,
+                        nodeName: 'p'
+                    }
+                ]
+            }
+        ];
+
+        // Delay Aleen's response
+        setTimeout(() => {
+            messageData = [
+                ...messageData,
+                // Add bot response after a delay
+                {
+                    userName: 'aleen', // Assuming 'aleen' is the bot's username
+                    message: [
+                        {
+                            data: botResponse,
+                            nodeName: 'p'
+                        }
+                    ]
+                }
+            ];
+
+            // Update the UI here if necessary to display the new message
+            // For example, you might call a function to refresh the chat display
+            // refreshChatDisplay();
+
+        }, 700); // Delay of 2000 milliseconds (2 seconds)
+
+        userTyped = '';
+    }
+}
+
+
+	function handleKeyPress(event) {
+		if (event.key === 'Enter') {
+			handleUserTyped();
+		}
+	}
+
+
+	let scrollToBottom = true; // Reactive variable to control auto-scrolling
+
+  // Function to handle scroll-to-bottom logic
+  function handleScroll() {
+    const container = document.querySelector('.chat-box-container-data');
+    if (container) {
+      // If the scroll position is near the bottom, enable auto-scrolling
+      scrollToBottom = container.scrollHeight - container.clientHeight <= container.scrollTop + 1;
+    }
+  }
+
+  // Scroll to bottom function
+  function scrollToBottomIfNeeded() {
+    if (scrollToBottom) {
+      const container = document.querySelector('.chat-box-container-data');
+      if (container) {
+        container.scrollTop = container.scrollHeight;
+      }
+    }
+  }
 </script>
 
 <section class="Hero-Section main-width-center">
@@ -412,30 +531,49 @@
 
 			<div class="chat-bar">
 				<div class="chat-bar-wrapper">
-					<div
-						class="chat-bar-container"
-						style={`${!pointerEventsChatBar ? 'pointer-events:all' : 'pointer-events:none'}`}
-					>
+					<div class="chat-bar-container" 	style={`${!pointerEventsChatBar ? 'pointer-events:all' : 'pointer-events:none'}`}>
+					
 						<div class="chat-box-container">
-							<div class="chat-box-container-data">
-								<div class="chat-item">
-									<img src={user1} alt="" />
-									<div class="content-field">
-										<p>“ Hi how can i assit you today?”</p>
-									</div>
-								</div>
-								<div class="chat-item chat-item-2">
+							<div class="chat-box-container-data " on:scroll={handleScroll}>
+								{#each messageData as user}
+									{#if user.userName === 'aleen'}
+										<div class="chat-item">
+											<img src={user1} alt="" />
+											<div class="content-field">
+												{#each user.message as message}
+													{@html message.data}
+												{/each}
+											</div>
+										</div>
+									{:else if user.userName === 'user'}
+										<div class="chat-item chat-item-2">
+											<img src={user2} alt="" />
+											<div class="content-field">
+												{#each user.message as message}
+													{@html message.data}
+												{/each}
+											</div>
+										</div>
+									{/if}
+								{/each}
+								<!-- <div class="chat-item chat-item-2">
 									<img src={user2} alt="" />
 									<div class="content-field">
 										<p>“ Today is a gift that’s why it is called present”</p>
 									</div>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="chat-footer">
 							<div class="chat-footer-input">
-								<input placeholder="Chat with Aleen" type="text" />
+								<input
+									bind:value={userTyped}
+									on:keyup={handleKeyPress}
+									placeholder="Chat with Aleen"
+									type="text"
+								/>
 								<svg
+									on:click={handleUserTyped}
 									xmlns="http://www.w3.org/2000/svg"
 									width="27"
 									height="27"

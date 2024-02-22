@@ -7,6 +7,7 @@
 
 	import gsap from 'gsap';
 	import { responseMessages, responses } from '$lib/utility/chat';
+	import { sanitizeAndValidateInput } from '$lib/utility/sanitize';
 	let displayedText = '';
 	const fullText =
 		"“Hello, you're welcome to engage in a conversation with me. I'm not an automated bot, however. I'm adept at following commands. Click to initiate a chat.”";
@@ -163,7 +164,7 @@ function handleUserTyped() {
                 userName: 'user',
                 message: [
                     {
-                        data: `<p>${userTyped}</p>`,
+                        data: `<p>${sanitizeAndValidateInput(userTyped).sanitizedInput}</p>`,
                         nodeName: 'p'
                     }
                 ]
@@ -569,7 +570,7 @@ function handleUserTyped() {
 								<input
 									bind:value={userTyped}
 									on:keyup={handleKeyPress}
-									placeholder="Chat with Aleen"
+									placeholder="chat with Aleen eg help/"
 									type="text"
 								/>
 								<svg

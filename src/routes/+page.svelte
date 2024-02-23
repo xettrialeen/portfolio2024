@@ -7,6 +7,9 @@ import Header from "$lib/component/layout/Header.svelte";
 	import ShowcaseSection from "$lib/component/layout/ShowcaseSection.svelte";
 	import WorkSection from "$lib/component/layout/WorkSection.svelte";
 
+
+
+
 </script>
 
 <Header />

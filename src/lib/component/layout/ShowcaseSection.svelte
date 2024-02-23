@@ -2,7 +2,7 @@
 	import htmlToFigma from '../../../assets/portfilio/htmltofigma.png';
 </script>
 
-<section class="Showcase-container main-width-center">
+<section class="Showcase-container main-width-center sticky-animate">
 	<div class="Showcase-container-wrapper width-1500 border-l border-b">
 		<div class="marque-container">
 			<div class="marquee-item">

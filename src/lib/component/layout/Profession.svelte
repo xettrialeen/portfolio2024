@@ -1,4 +1,4 @@
-<section class="Profession-container main-width-center">
+<section class="Profession-container main-width-center sticky-animate">
 	<div class="Profession-container-wrapper width-1500 border-l border-b">
 		<div class="marque-container">
 			<div class="marquee-item">

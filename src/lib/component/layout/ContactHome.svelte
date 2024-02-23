@@ -222,7 +222,7 @@ position: absolute;
 	<div class="ContactHome-section-wrapper width-1500 border-r border-b"></div>
 </section>
 
-<section class="ContactHome-section-3 main-width-center">
+<section class="ContactHome-section-3 main-width-center sticky-animate">
 	<div class="ContactHome-section-wrapper-3 width-1500 border-r border-b">
         <div class="marque-container">
 			<div class="marquee-item">

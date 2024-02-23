@@ -156,9 +156,16 @@
 						background: #9f24ff;
 						z-index: 1;
 
+						@include mq('max', '946px') {
+							height: 3.375rem;
+						}
+
 						@include mq('max', '469px') {
+							height: 2.375rem;
 							padding: 0rem 0.25rem 0rem 0.4375rem;
 						}
+
+
 
 						&:hover {
 							svg {
@@ -176,10 +183,17 @@
 							opacity: 1;
 							@include trans(transform);
 
+							@include mq('max', '946px') {
+								height: 34px;
+							width: 34px;
+							}
+
 							@include mq('max', '469px') {
 							height: 20px;
 							width: 20px;
 							}
+
+							
 						}
 						span {
 							color: #fff;
@@ -189,6 +203,10 @@
 							font-style: normal;
 							font-weight: 500;
 							line-height: 1.6875rem; /* 168.75% */
+
+							@include mq('max', '946px') {
+							font-size: 0.85rem;
+							}
 							@include mq('max', '469px') {
 								font-size: 0.7rem;
 							}

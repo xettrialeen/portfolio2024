@@ -31,7 +31,7 @@
 	onMount(componentStat);
 </script>
 
-<section class="Work-section main-width-center">
+<section class="Work-section main-width-center sticky-animate">
 	<div class="width-1500 Work-section-wrapper border-l border-b">
 		<div class="marque-container">
 			<div class="marquee-item">

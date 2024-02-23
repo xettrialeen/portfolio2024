@@ -595,8 +595,14 @@ header .Header__container .Header__container__inner nav {
   background: #9f24ff;
   z-index: 1;
 }
+@media screen and (max-width: 946px) {
+  .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action {
+    height: 3.375rem;
+  }
+}
 @media screen and (max-width: 469px) {
   .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action {
+    height: 2.375rem;
     padding: 0rem 0.25rem 0rem 0.4375rem;
   }
 }
@@ -615,6 +621,12 @@ header .Header__container .Header__container__inner nav {
   -ms-transition: transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
 }
+@media screen and (max-width: 946px) {
+  .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action svg {
+    height: 34px;
+    width: 34px;
+  }
+}
 @media screen and (max-width: 469px) {
   .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action svg {
     height: 20px;
@@ -629,6 +641,11 @@ header .Header__container .Header__container__inner nav {
   font-style: normal;
   font-weight: 500;
   line-height: 1.6875rem; /* 168.75% */
+}
+@media screen and (max-width: 946px) {
+  .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action span {
+    font-size: 0.85rem;
+  }
 }
 @media screen and (max-width: 469px) {
   .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action span {

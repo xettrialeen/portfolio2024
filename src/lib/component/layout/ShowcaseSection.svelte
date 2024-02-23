@@ -597,7 +597,7 @@
 		<section class="tab-container">
 			<div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a href="#"  class="tab-container-item-wrapper">
+					<a target="_blank" href="https://www.linkedin.com/posts/aleenbhandari_htmltofigma-designinnovation-techupdate-activity-7163921153269473280-PjJT?utm_source=combined_share_message&utm_medium=member_desktop"  class="tab-container-item-wrapper">
 						<seciton class="tci-direction">
 							<div class="tcd-title">
 								<h2>figma plugin</h2>
@@ -630,23 +630,23 @@
             <div class="break-border border-l border-b" style="height: 55px;"></div>
             <div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a href="#"  class="tab-container-item-wrapper">
+					<a href="https://www.linkedin.com/posts/aleenbhandari_seo-developertools-debugmatic-activity-7155781265282019328-uP1l?utm_source=combined_share_message&utm_medium=member_desktop" target="_blank"  class="tab-container-item-wrapper">
 						<seciton class="tci-direction">
 							<div class="tcd-title">
-								<h2>figma plugin</h2>
+								<h2>chrome extension</h2>
 							</div>
 							<section>
 								<div class="title-item-name">
 									<p>
-										<span>A)</span> <span>Html to figma</span>
+										<span>B)</span> <span>debugmatic</span>
 									</p>
 								</div>
 								<div class="title-item-list">
 									<ul>
-										<li><span>Svelte</span></li>
-										<li><span>pocket base</span></li>
-										<li><span>node.js</span></li>
-										<li><span>Figma</span></li>
+										<li><span>Sveltekit</span></li>
+										<li><span>ruby on rails</span></li>
+										<li><span>Chrome Api</span></li>
+									
 									</ul>
 
 									
@@ -663,23 +663,23 @@
             <div class="break-border border-l border-b" style="height: 55px;"></div>
             <div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a href="#"  class="tab-container-item-wrapper">
+					<a target="_blank" href="https://getequitool.com/"  class="tab-container-item-wrapper">
 						<seciton class="tci-direction">
 							<div class="tcd-title">
-								<h2>figma plugin</h2>
+								<h2>assebility plugin</h2>
 							</div>
 							<section>
 								<div class="title-item-name">
 									<p>
-										<span>A)</span> <span>Html to figma</span>
+										<span>A)</span> <span>Equitool</span>
 									</p>
 								</div>
 								<div class="title-item-list">
 									<ul>
-										<li><span>Svelte</span></li>
-										<li><span>pocket base</span></li>
-										<li><span>node.js</span></li>
-										<li><span>Figma</span></li>
+										<li><span>vite.js</span></li>
+										<li><span>Html</span></li>
+										<li><span>Scss</span></li>
+										<li><span>chrome ex-api</span></li>
 									</ul>
 
 									

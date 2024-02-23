@@ -195,7 +195,7 @@ export const responses = {
 	services: [
 		'services',
 		'what do you offer',
-        'what can you do?',
+		'what can you do?',
 		'what can you do',
 		'offered services',
 		'service offerings',
@@ -629,28 +629,28 @@ export let responseMessages = {
             <img src="${debugmatic}" alt="" />
             <div class="link-title">
                 <h3>Debugmatic</h3>
-                <a href="#">Link</a>
+                <a target="_blank" href="https://www.linkedin.com/posts/aleenbhandari_seo-developertools-debugmatic-activity-7155781265282019328-uP1l?utm_source=combined_share_message&utm_medium=member_desktop">Link</a>
             </div>
         </div>
         <div class="link-item">
             <img src="${htmlToFigma}" alt="" />
             <div class="link-title">
                 <h3>Html To Figma</h3>
-                <a href="#">Link</a>
+                <a   target="_blank" href="https://www.linkedin.com/posts/aleenbhandari_htmltofigma-designinnovation-techupdate-activity-7163921153269473280-PjJT?utm_source=combined_share_message&utm_medium=member_desktop">Link</a>
             </div>
         </div>
         <div class="link-item">
             <img src="${equitool}" alt="" />
             <div class="link-title">
                 <h3>Equitool</h3>
-                <a href="#">Link</a>
+                <a  target="_blank" href="https://getequitool.com/">Link</a>
             </div>
         </div>
         <div class="link-item">
             <img src="${devSimplify}" alt="" />
             <div class="link-title">
                 <h3>Sveltekit + Blogger Template</h3>
-                <a href="#">Link</a>
+                <a target="_blank" href="https://test-devsimplify.netlify.app/">Link</a>
             </div>
         </div>
     </section>

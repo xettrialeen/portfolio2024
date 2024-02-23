@@ -100,11 +100,18 @@
 }
 
 .Showcase-container-3 {
+
+
+	overflow: hidden;
+	position: relative;
 	.Showcase-container-3-wrapper {
+
+
 		.tab-container {
 			.tab-container-wrapper {
 				position: relative;
-				overflow: hidden;
+				overflow: hidden !important;
+				
 
 				&:hover {
 					.tab-container-bg {
@@ -141,6 +148,7 @@
 			}
 			.tab-container-item-wrapper {
 				@include flex-row;
+				text-decoration: none;
 
 				@include mq('max', '946px') {
 					flex-direction: column;

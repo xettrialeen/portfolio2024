@@ -776,7 +776,7 @@ position: absolute;
 </section>
 
 <section class="ContactHome-section-2 main-width-center">
-	<div class="ContactHome-section-wrapper-2 width-1500 border-r border-b">
+	<div class="ContactHome-section-wrapper-2 width-1500 border-l border-b">
         
     </div>
 </section>

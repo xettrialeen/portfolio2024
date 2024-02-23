@@ -1137,12 +1137,13 @@ header .Header__container .Header__container__inner nav {
 
 .component-item-active {
   height: 73dvh !important;
-  transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transform-origin: center; /* Set transform origin to center */
+  transition: height 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  -moz-transition: height 0.3s ease-in-out;
+  -ms-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  transform-origin: top left;
+  /*Settransformorigintocenter*/
 }
 .component-item-active .Component-item-bg {
   transform: translateY(0%) !important;
@@ -1543,9 +1544,13 @@ header .Header__container .Header__container__inner nav {
   -o-transition: fill-opacity 0.3s ease-in-out;
 }
 
+.Showcase-container-3 {
+  overflow: hidden;
+  position: relative;
+}
 .Showcase-container-3 .Showcase-container-3-wrapper .tab-container .tab-container-wrapper {
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .Showcase-container-3 .Showcase-container-3-wrapper .tab-container .tab-container-wrapper:hover .tab-container-bg {
   transform: translateY(0%);
@@ -1579,6 +1584,7 @@ header .Header__container .Header__container__inner nav {
 .Showcase-container-3 .Showcase-container-3-wrapper .tab-container .tab-container-item-wrapper {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
 }
 @media screen and (max-width: 946px) {
   .Showcase-container-3 .Showcase-container-3-wrapper .tab-container .tab-container-item-wrapper {

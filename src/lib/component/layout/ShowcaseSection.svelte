@@ -1,5 +1,9 @@
 <script>
-	import htmlToFigma from '../../../assets/portfilio/htmltofigma.png';
+	
+	import equitool from '../../../assets/portfilio/equitool.png';
+
+import debugmatic from '../../../assets/portfilio/debugmatic.png';
+import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 </script>
 
 <section class="Showcase-container main-width-center sticky-animate">
@@ -653,7 +657,7 @@
 								</div>
 							</section>
 						</seciton>
-						<seciton class="tci-direction"><img src={htmlToFigma} alt="" /></seciton>
+						<seciton class="tci-direction"><img src={debugmatic} alt="" /></seciton>
 					</a >
 					<div class="tab-container-bg"></div>
 				</div>
@@ -686,7 +690,7 @@
 								</div>
 							</section>
 						</seciton>
-						<seciton class="tci-direction"><img src={htmlToFigma} alt="" /></seciton>
+						<seciton class="tci-direction"><img src={equitool} alt="" /></seciton>
 					</a >
 					<div class="tab-container-bg"></div>
 				</div>

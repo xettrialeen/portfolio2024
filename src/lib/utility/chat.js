@@ -1,3 +1,8 @@
+import equitool from '../../assets/portfilio/equitool.png';
+import devSimplify from '../../assets/portfilio/devSimplify.png';
+import debugmatic from '../../assets/portfilio/debugmatic.png';
+import htmlToFigma from '../../assets/portfilio/htmlToFigma1.png';
+
 export const responses = {
 	greetings: [
 		'hello',
@@ -621,28 +626,28 @@ export let responseMessages = {
     <p>"Of course, here are some of the latest showcases that I've created."</p>
     <section class="image-link">
         <div class="link-item">
-            <img src="/src/assets/portfilio/debugmatic.png" alt="" />
+            <img src="${debugmatic}" alt="" />
             <div class="link-title">
                 <h3>Debugmatic</h3>
                 <a href="#">Link</a>
             </div>
         </div>
         <div class="link-item">
-            <img src="/src/assets/portfilio/htmlToFigma1.png" alt="" />
+            <img src="${htmlToFigma}" alt="" />
             <div class="link-title">
                 <h3>Html To Figma</h3>
                 <a href="#">Link</a>
             </div>
         </div>
         <div class="link-item">
-            <img src="/src/assets/portfilio/equitool.png" alt="" />
+            <img src="${equitool}" alt="" />
             <div class="link-title">
                 <h3>Equitool</h3>
                 <a href="#">Link</a>
             </div>
         </div>
         <div class="link-item">
-            <img src="/src/assets/portfilio/devSimplify.png" alt="" />
+            <img src="${devSimplify}" alt="" />
             <div class="link-title">
                 <h3>Sveltekit + Blogger Template</h3>
                 <a href="#">Link</a>

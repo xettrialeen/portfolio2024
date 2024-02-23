@@ -1,0 +1,88 @@
+{
+  ".svelte-kit/generated/server/internal.js": {
+    "file": "internal.js",
+    "src": ".svelte-kit/generated/server/internal.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js"
+    ]
+  },
+  "_exports.js": {
+    "file": "chunks/exports.js"
+  },
+  "_internal.js": {
+    "file": "chunks/internal.js",
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "_ssr.js": {
+    "file": "chunks/ssr.js"
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
+    "file": "entries/fallbacks/error.svelte.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js",
+      "_exports.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
+    "file": "entries/fallbacks/layout.svelte.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
+  "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
+    "file": "index.js",
+    "src": "node_modules/@sveltejs/kit/src/runtime/server/index.js",
+    "isEntry": true,
+    "imports": [
+      "_internal.js",
+      "_exports.js",
+      "_ssr.js"
+    ]
+  },
+  "src/assets/my/aleen.png": {
+    "file": "_app/immutable/assets/aleen.DiQzI_96.png",
+    "src": "src/assets/my/aleen.png"
+  },
+  "src/assets/portfilio/debugmatic.png": {
+    "file": "_app/immutable/assets/debugmatic.eMURq0XC.png",
+    "src": "src/assets/portfilio/debugmatic.png"
+  },
+  "src/assets/portfilio/devSimplify.png": {
+    "file": "_app/immutable/assets/devSimplify.D7HL3DpP.png",
+    "src": "src/assets/portfilio/devSimplify.png"
+  },
+  "src/assets/portfilio/equitool.png": {
+    "file": "_app/immutable/assets/equitool.DJ-txp7o.png",
+    "src": "src/assets/portfilio/equitool.png"
+  },
+  "src/assets/portfilio/htmlToFigma1.png": {
+    "file": "_app/immutable/assets/htmlToFigma1.D04ij8v9.png",
+    "src": "src/assets/portfilio/htmlToFigma1.png"
+  },
+  "src/assets/portfilio/htmltofigma.png": {
+    "file": "_app/immutable/assets/htmltofigma.eFZeQrWR.png",
+    "src": "src/assets/portfilio/htmltofigma.png"
+  },
+  "src/routes/+page.svelte": {
+    "file": "entries/pages/_page.svelte.js",
+    "src": "src/routes/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page.C8lGXu7R.css"
+    ],
+    "assets": [
+      "_app/immutable/assets/aleen.DiQzI_96.png",
+      "_app/immutable/assets/htmltofigma.eFZeQrWR.png"
+    ]
+  }
+}

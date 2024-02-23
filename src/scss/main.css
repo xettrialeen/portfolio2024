@@ -546,6 +546,10 @@ header .Header__container .Header__container__inner nav {
   padding-bottom: 47.73px;
   position: relative;
   width: 70%;
+  overflow: hidden;
+}
+.Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title svg {
+  opacity: 0;
 }
 @media screen and (max-width: 946px) {
   .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title svg {
@@ -559,13 +563,14 @@ header .Header__container .Header__container__inner nav {
   padding: 0rem 1.25rem 0rem 1.4375rem;
   height: 2.375rem;
   align-items: center;
-  bottom: 158px;
+  bottom: 117px;
   display: flex;
   flex-direction: row;
   gap: 6px;
   border-radius: 0.125rem;
   border: 3px solid #000;
   background: #9f24ff;
+  z-index: 1;
 }
 .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action:hover svg {
   transform: translateY(-3px);
@@ -575,6 +580,7 @@ header .Header__container .Header__container__inner nav {
   -o-transform: translateY(-3px);
 }
 .Hero-Section .Hero-Section-wrapper .Hero-Section__Item:nth-child(2) .HSCI__Title .chat-opener-action svg {
+  opacity: 1;
   transition: transform 0.3s ease-in-out;
   -webkit-transition: transform 0.3s ease-in-out;
   -moz-transition: transform 0.3s ease-in-out;
@@ -594,7 +600,7 @@ header .Header__container .Header__container__inner nav {
   color: #230b35;
   text-align: center;
   overflow: hidden;
-  min-height: 105px;
+  min-height: 60px;
   font-size: 1.03731rem;
   font-style: normal;
   font-weight: 500;

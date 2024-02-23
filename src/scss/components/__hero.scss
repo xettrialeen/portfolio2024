@@ -122,7 +122,9 @@
 					padding-bottom: 47.73px;
 					position: relative;
 					width: 70%;
+					overflow: hidden;
 					svg {
+						opacity: 0;
 						@include mq('max', '946px') {
 							width: 100%;
 							height: auto;
@@ -135,15 +137,17 @@
 						padding: 0rem 1.25rem 0rem 1.4375rem;
 						height: 2.375rem;
 						align-items: center;
-						bottom: 158px;
+						bottom: 117px;
 						@include flex-row;
 						gap: 6px;
 						border-radius: 0.125rem;
 						border: 3px solid #000;
 						background: #9f24ff;
+						z-index: 1;
 
 						&:hover {
 							svg {
+								
 								transform: translateY(-3px);
 								-webkit-transform: translateY(-3px);
 								-moz-transform: translateY(-3px);
@@ -153,6 +157,7 @@
 						}
 
 						svg {
+							opacity: 1;
 							@include trans(transform);
 						}
 						span {
@@ -170,7 +175,7 @@
 						text-align: center;
 						overflow: hidden;
 
-						min-height: 105px;
+						min-height: 60px;
 						font-size: 1.03731rem;
 						font-style: normal;
 						font-weight: 500;

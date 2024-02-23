@@ -11,29 +11,21 @@
 	import { sanitizeAndValidateInput } from '$lib/utility/sanitize';
 	let displayedText = '';
 	const fullText =
-		"“Hello, you're welcome to engage in a conversation with me. I'm not an automated bot, however. I'm adept at following commands. Click to initiate a chat.”";
+		"'Explore my portfolio or chat with me. Let's connect! 😄'";
 
 	const words = fullText.split(/\s+/); // Split the text into words
 	let index = 0;
 	let isChat = true;
 	onMount(() => {
 		handleScroll();
-		const interval = setInterval(() => {
-			if (index < words.length) {
-				displayedText += (index > 0 ? ' ' : '') + words[index];
-				index++;
-			} else {
-				clearInterval(interval);
-				isChat = false;
-			}
-		}, 50); // Adjust typing speed by changing the interval time
+		// Adjust typing speed by changing the interval time
 
 		const tl = gsap.timeline();
 
 		tl.fromTo(
-			['.MaskSplitText__Wrapper .mask__line ','.hero-action'],
+			['.MaskSplitText__Wrapper .mask__line ','.social-wrapper a','.hero-action','.HSCI__Title svg'],
 			{
-				y: '100%',
+				y: '20%',
 				opacity:0
 			},
 			{
@@ -43,6 +35,17 @@
 				ease: 'back.inOut',
 				stagger: {
 					amount: 0.7
+				},
+				onComplete:()=>{
+					const interval = setInterval(() => {
+			if (index < words.length) {
+				displayedText += (index > 0 ? ' ' : '') + words[index];
+				index++;
+			} else {
+				clearInterval(interval);
+				isChat = false;
+			}
+		}, 50); 
 				}
 			},
 			0

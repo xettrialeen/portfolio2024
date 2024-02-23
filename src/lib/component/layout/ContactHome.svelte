@@ -781,6 +781,60 @@ position: absolute;
     </div>
 </section>
 
+<section class="ContactHome-section-4 main-width-center">
+	<a href="#" class="ContactHome-section-wrapper-4 width-1500 ">
+        <section>
+			<div class="Component-item-title custom-cursor border-r border-b">
+				<h2 class="">
+					<div class="component-item-transX"><span>Get In</span></div>
+					<div class="component-item-transX"><span>Get In</span></div>
+				</h2>
+				<button>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="74"
+						height="74"
+						fill="none"
+						viewBox="0 0 74 74"
+					>
+						<path
+							fill="#000"
+							fill-rule="evenodd"
+							d="m4.04 37 24.059 8.904L37 69.962l8.902-24.056L69.96 37H4.039Z"
+							clip-rule="evenodd"
+						/>
+						<path
+							fill="#000"
+							fill-rule="evenodd"
+							d="m4.04 37 24.059-8.904L37 4.039l8.902 24.057L69.96 37H4.039Z"
+							clip-rule="evenodd"
+							opacity=".4"
+						/>
+					</svg>
+				</button>
+			</div>
+			<div class="contactHome-bg"></div>
+		</section>
+        <section>
+			<div class="Component-item-title custom-cursor border-l border-b">
+				<h2 class="">
+					<div class="component-item-transX"><span>Touch</span></div>
+					<div class="component-item-transX"><span>Touch</span></div>
+				</h2>
+				<button>
+					<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M110.669 68L17.3371 68L17.3371 60L110.669 60L110.669 68Z" fill="black"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M106.669 60C87.855 60 72.4817 76.5448 72.4817 94.1869L72.4817 98.1869L80.4817 98.1869L80.4817 94.1869C80.4817 80.7918 92.4425 68 106.669 68L110.669 68L110.669 60L106.669 60Z" fill="black"/>
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M106.669 68C87.855 68 72.4817 51.4552 72.4817 33.8131L72.4817 29.8131L80.4817 29.8131L80.4817 33.8131C80.4817 47.2082 92.4425 60 106.669 60L110.669 60L110.669 68L106.669 68Z" fill="black"/>
+					  </svg>
+				</button>
+			</div>
+			<div class="contactHome-bg"></div>
+		</section>
+		
+    </a>
+</section>
+
 
 
 <style lang="scss">

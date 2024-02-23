@@ -51,6 +51,12 @@
 		padding-top: 47px;
 		padding-left: 27px;
 		padding-bottom: 218px;
+
+		@include mq('max', '469px') {
+	padding-top: 24px;
+	padding-bottom: 48px;
+	padding-left: 16px;
+		}
 		width: 100%;
 		.About-section-container {
 			width: 100%;
@@ -66,6 +72,19 @@
 				text-transform: uppercase;
 				margin-bottom: 31px;
 			}
+
+			.paragraph_hero{
+				@include mq('max', '469px') {
+					font-size: 0.9rem;
+					line-height: 120%;
+				}
+
+				.mask__word {
+					@include mq('max', '469px') {
+						letter-spacing: 0.0rem !important;
+					}
+				}
+			}
 		}
 	}
 }
@@ -75,9 +94,20 @@
 		display: block;
 		text-align: start;
 		position: relative;
+
+		@include mq('max', '469px') {
+			@include flex-row;
+flex-wrap: wrap;
+			gap: 12px;
+		}
 		.mask__word {
 			position: relative;
 			display: inline-block;
+			@include mq('max', '469px') {
+				
+	
+				letter-spacing: 0.2rem;
+			}
 		}
 	}
 }

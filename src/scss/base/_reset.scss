@@ -12,6 +12,7 @@
 	-webkit-tap-highlight-color: transparent;
 	// border: 1px solid red;
 	font-family: $font;
+	text-rendering: optimizeLegibility;
 }
 
 .main-width-center {
@@ -156,8 +157,11 @@ a {
 	}
 
 	@include mq('max', '469px') {
-		font-size: 3rem;
-	}
+	font-size: 2rem;
+	line-height: 120%;
+		}
+
+
 }
 .border-l {
 	border-left: 4px solid var(--color-black);

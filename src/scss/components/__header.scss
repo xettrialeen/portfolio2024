@@ -9,6 +9,9 @@ header {
 	margin-top: var(--wrapper-padding);
 	text-transform: uppercase;
 	z-index: 1000;
+	@include mq("max","490px"){
+margin-top: 16px;
+			}
 
 	@include flex-row;
 	justify-content: center;
@@ -50,6 +53,10 @@ header {
 				font-weight: 500;
 				line-height: normal;
 				text-transform: uppercase;
+
+				@include mq('max', '469px') {
+					font-size: 0.9rem;
+					}
 			}
 
 			.HeaderLogo_wrapper {

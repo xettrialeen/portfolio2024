@@ -1,35 +1,53 @@
 @use '../abstracts/abstract__helpers' as *;
 @use '../base/base__helpers' as *;
 
-.Profession-container-2{
-    height: 55px;
+.Profession-container-2 {
+	min-height: 55px;
+	max-height: auto;
+	height: 55px;
+	@include mq('max', '469px') {
+		height: 100% !important;
+	}
 }
 
-.profession-item-row{
-    @include flex-row;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 16px;
-    padding-right: 16px;
-    .profession-item{
-p{
-    @include flex-row;
-    align-items: center;
-    gap: 6px;
-    color: #151515;
-font-family: "Suisse Intl";
-font-size: 1.2rem;
-font-style: normal;
-font-weight: 500;
-line-height: 135.714%; /* 1.62856rem */
-text-transform: uppercase;
-}
-    }
+.profession-item-row {
+	@include flex-row;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 16px;
+	padding-right: 16px;
+	@include mq('max', '469px') {
+		padding-bottom: 16px;
+		padding-top: 16px;
+		flex-direction: column;
+		align-items: start;
+		gap: 12px;
+	}
+	.profession-item {
+		p {
+			@include flex-row;
+			align-items: center;
+			gap: 6px;
+			color: #151515;
+			font-family: 'Suisse Intl';
+			font-size: 1.2rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 135.714%; /* 1.62856rem */
+			text-transform: uppercase;
+
+			@include mq('max', '469px') {
+				font-size: 0.9rem;
+			}
+
+
+		}
+	}
 }
 
-.Profession-container{
-    .Profession-container-wrapper{
-        height: 55px;
+.Profession-container {
+	.Profession-container-wrapper {
+		height: 55px;
 		position: relative;
 		overflow-x: hidden;
 		background: var(--color-black);
@@ -64,9 +82,8 @@ text-transform: uppercase;
 				}
 			}
 		}
-    }
+	}
 }
-
 
 @keyframes marquee {
 	from {

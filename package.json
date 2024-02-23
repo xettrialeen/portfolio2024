@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-vercel": "^5.1.0",
 		"gsap": "^3.12.5",
 		"matter-js": "^0.19.0"
 	}

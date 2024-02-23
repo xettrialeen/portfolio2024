@@ -247,6 +247,11 @@
 			}
 		}
 	}
+
+
+	function downloadResume() {
+		window.open("https://portfolio-xettrialeen.netlify.app/assets/xettrialeen.pdf", '_blank')
+	}
 </script>
 
 <section class="Hero-Section main-width-center">
@@ -280,7 +285,7 @@
 						<div class="mask__line">
 							<p class="mask__word">UX Enthusiast | API Reverse Engineer.</p>
 						</div>
-						<button class="hero-action">
+						<button class="hero-action" on:click={downloadResume}>
 							<span>Download Resume</span>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -655,16 +660,16 @@
 			</div>
 
 			<div class="social-wrapper">
-				<a href="#" class=" custom-cursor">
+				<a href="https://www.facebook.com/xettrialeen/" target="_blank"  class=" custom-cursor">
 					<span>Facebook</span>
 				</a>
-				<a href="#" class="custom-cursor">
+				<a href="https://www.instagram.com/aleenxettri/" target="_blank"  class="custom-cursor">
 					<span>Instagram</span>
 				</a>
-				<a href="#" class="custom-cursor">
+				<a href="https://github.com/xettrialeen"  target="_blank" class="custom-cursor">
 					<span>Github</span>
 				</a>
-				<a href="#" class="custom-cursor">
+				<a href="https://www.linkedin.com/in/aleenbhandari/" target="_blank" class="custom-cursor">
 					<span>Linkedin</span>
 				</a>
 			</div>

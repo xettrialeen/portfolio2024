@@ -49,31 +49,81 @@
 }
 
 .component-item-active {
-	height: 100% !important;
-
+	height: 73dvh !important ;
+	transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+	transform-origin: center; /* Set transform origin to center */
 	.Component-item-bg {
 		transform: translateY(0%) !important;
 		-webkit-transform: translateY(0%) !important;
 		-moz-transform: translateY(0%) !important;
 		-ms-transform: translateY(0%) !important;
 		-o-transform: translateY(0%) !important;
+	
+}
+
+&:hover{
+
+
+	.Component-item-title{
+	
+	
+		button {
+			svg {
+				transform: rotate(135deg) !important;
+				-webkit-transform: rotate(135deg) !important;
+				-moz-transform: rotate(135deg) !important;
+				-ms-transform: rotate(135deg) !important;
+				-o-transform: rotate(135deg) !important;
+}
+		}
 	}
+}
+	.Component-item-title{
+	
+		
+		*{
+			transition: none !important;
+			-webkit-transition: none !important;
+		-moz-transition: none !important;
+		-ms-transition: none !important;
+		-o-transition: none !important;
+		}
+		button {
+			svg {
+				transform: rotate(135deg);
+				-webkit-transform: rotate(135deg);
+				-moz-transform: rotate(135deg);
+				-ms-transform: rotate(135deg);
+				-o-transform: rotate(135deg);
+}
+		}
+	}
+
 }
 
 .Component-item {
 	width: 100%;
-	@include flex-colum;
+	transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+		@include flex-colum;
 	padding-left: 107px;
 	padding-right: 20px;
-
-	@include mq('max', '1191px') {
+		@include mq('max','1191px')
+{
 		padding-left: 16px;
 		padding-right: 16px;
-	
 	}
+
 	position: relative;
 	overflow: hidden;
-	height: 160px;
+	height: 21dvh ;
 
 	.Component-item-wrapper {
 		transform: translateY(25px);
@@ -91,9 +141,6 @@
 			-ms-transform: translateY(0%);
 			-o-transform: translateY(0%);
 		}
-	
-
-
 	}
 	.Component-item-bg {
 		position: absolute;
@@ -113,10 +160,13 @@
 		@include flex-row;
 		justify-content: space-between;
 
-		&:hover{
-			h2{
+		&:hover {
+			h2 {
+				
 				.component-item-transX {
+				
 					&:nth-child(1) {
+						
 						transform: translate(0px, -100%);
 						-webkit-transform: translate(0px, -100%);
 						-moz-transform: translate(0px, -100%);
@@ -124,23 +174,24 @@
 						-o-transform: translate(0px, -100%);
 					}
 					&:nth-child(2) {
+						
 						transform: translate(0px, 0%);
 						-webkit-transform: translate(0px, 0%);
 						-moz-transform: translate(0px, 0%);
 						-ms-transform: translate(0px, 0%);
 						-o-transform: translate(0px, 0%);
 					}
+				}
 			}
-		}
-		button{
-			svg{
-				transform: rotate(12deg);
-				-webkit-transform: rotate(12deg);
-				-moz-transform: rotate(12deg);
-				-ms-transform: rotate(12deg);
-				-o-transform: rotate(12deg);
-}
-		}
+			button {
+				svg {
+					transform: rotate(12deg);
+					-webkit-transform: rotate(12deg);
+					-moz-transform: rotate(12deg);
+					-ms-transform: rotate(12deg);
+					-o-transform: rotate(12deg);
+				}
+			}
 		}
 
 		h2 {
@@ -154,17 +205,20 @@
 			letter-spacing: -0.125rem;
 			text-transform: uppercase;
 			font-weight: 600;
+		
 			@include mq('max', '1149px') {
 				font-size: 4rem;
 			}
-		
+
 			@include mq('max', '469px') {
 				font-size: 3rem;
-			
 			}
 			.component-item-transX {
 				padding-left: 0px;
 				padding-right: 0px;
+				span{
+					text-align: left;
+				}
 			}
 
 			position: relative;
@@ -202,7 +256,7 @@
 			background-color: transparent;
 			border: none;
 
-			svg{
+			svg {
 				@include trans(transform);
 			}
 		}

@@ -1,82 +1,82 @@
 @mixin trans($name) {
 	transition:
-		$name,
+		$name
 		0.3s ease-in-out;
 	-webkit-transition:
-		$name,
+		$name
 		0.3s ease-in-out;
 	-moz-transition:
-		$name,
+		$name
 		0.3s ease-in-out;
 	-ms-transition:
-		$name,
+		$name
 		0.3s ease-in-out;
 	-o-transition:
-		$name,
+		$name
 		0.3s ease-in-out;
 }
 @mixin transMul($first, $second) {
 	transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out;
 	-webkit-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out;
 	-moz-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out;
 	-ms-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out;
 	-o-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out;
 }
 @mixin transTrip($first, $second, $third) {
 	transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out,
-		$third,
+		$third
 		0.3s ease-in-out;
 	-webkit-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out,
-		$third,
+		$third
 		0.3s ease-in-out;
 	-moz-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out,
-		$third,
+		$third
 		0.3s ease-in-out;
 	-ms-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out,
-		$third,
+		$third
 		0.3s ease-in-out;
 	-o-transition:
-		$first,
+		$first
 		0.3s ease-in-out,
-		$second,
+		$second
 		0.3s ease-in-out,
-		$third,
+		$third
 		0.3s ease-in-out;
 }
 

@@ -74,6 +74,7 @@
 					}
 
 					.hero-action {
+						opacity: 0;
 						margin-top: 33.25px;
 						@include flex-row;
 						align-items: center;
@@ -558,13 +559,27 @@
 }
 
 .MaskSplitText__Wrapper {
+	overflow: hidden;
 	.mask__line {
 		display: block;
 		text-align: start;
 		position: relative;
-		.mask__word {
+		opacity: 0;
+
+		.mask__word{
 			position: relative;
 			display: inline-block;
+
+
 		}
+
+
+		transform:translateY(100%) ;
+		
+		-webkit-transform:translateY(100%) ;
+		-moz-transform:translateY(100%) ;
+		-ms-transform:translateY(100%) ;
+		-o-transform:translateY(100%) ;
+		
 	}
 }

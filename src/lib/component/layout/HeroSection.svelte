@@ -3,10 +3,6 @@
 	import aleen from '../../../assets/my/aleen.png';
 	import user1 from '../../../assets/portfilio/user1.png';
 	import user2 from '../../../assets/portfilio/user2.png';
-	import equitool from '../../../assets/portfilio/equitool.png';
-	import devSimplify from '../../../assets/portfilio/devSimplify.png';
-	import debugmatic from '../../../assets/portfilio/debugmatic.png';
-	import htmlToFigma from '../../../assets/portfilio/htmlToFigma1.png';
 
 	import { onMount, onDestroy, afterUpdate } from 'svelte';
 
@@ -31,6 +27,26 @@
 				isChat = false;
 			}
 		}, 50); // Adjust typing speed by changing the interval time
+
+		const tl = gsap.timeline();
+
+		tl.fromTo(
+			['.MaskSplitText__Wrapper .mask__line ','.hero-action'],
+			{
+				y: '100%',
+				opacity:0
+			},
+			{
+				y: '0%',
+				duration: 0.8,
+				opacity:1,
+				ease: 'back.inOut',
+				stagger: {
+					amount: 0.7
+				}
+			},
+			0
+		);
 	});
 
 	afterUpdate(scrollToBottomIfNeeded);
@@ -117,12 +133,10 @@
 				0
 			);
 
-		setTimeout(()=>{
+		setTimeout(() => {
 			inputElement.focus();
-		},1000)
+		}, 1000);
 	}
-
-
 
 	let userTyped;
 	let messageData = [

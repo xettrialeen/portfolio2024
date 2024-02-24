@@ -1,9 +1,8 @@
 <script>
-	
 	import equitool from '../../../assets/portfilio/equitool.png';
 
-import debugmatic from '../../../assets/portfilio/debugmatic.png';
-import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
+	import debugmatic from '../../../assets/portfilio/debugmatic.png';
+	import htmlToFigma from '../../../assets/portfilio/htmltofigma.png';
 </script>
 
 <section class="Showcase-container main-width-center sticky-animate">
@@ -601,7 +600,11 @@ import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 		<section class="tab-container">
 			<div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a target="_blank" href="https://www.linkedin.com/posts/aleenbhandari_htmltofigma-designinnovation-techupdate-activity-7163921153269473280-PjJT?utm_source=combined_share_message&utm_medium=member_desktop"  class="tab-container-item-wrapper">
+					<a
+						target="_blank"
+						href="https://www.linkedin.com/posts/aleenbhandari_htmltofigma-designinnovation-techupdate-activity-7163921153269473280-PjJT?utm_source=combined_share_message&utm_medium=member_desktop"
+						class="tab-container-item-wrapper"
+					>
 						<seciton class="tci-direction">
 							<div class="tcd-title">
 								<h2>figma plugin</h2>
@@ -619,22 +622,22 @@ import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 										<li><span>node.js</span></li>
 										<li><span>Figma</span></li>
 									</ul>
-
-									
 								</div>
 							</section>
 						</seciton>
 						<seciton class="tci-direction"><img src={htmlToFigma} alt="" /></seciton>
-					</a >
+					</a>
 					<div class="tab-container-bg"></div>
 				</div>
-
-			
 			</div>
-            <div class="break-border border-l border-b" style="height: 55px;"></div>
-            <div class="tab-container-wrapper">
+			<div class="break-border border-l border-b" style="height: 55px;"></div>
+			<div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a href="https://www.linkedin.com/posts/aleenbhandari_seo-developertools-debugmatic-activity-7155781265282019328-uP1l?utm_source=combined_share_message&utm_medium=member_desktop" target="_blank"  class="tab-container-item-wrapper">
+					<a
+						href="https://www.linkedin.com/posts/aleenbhandari_seo-developertools-debugmatic-activity-7155781265282019328-uP1l?utm_source=combined_share_message&utm_medium=member_desktop"
+						target="_blank"
+						class="tab-container-item-wrapper"
+					>
 						<seciton class="tci-direction">
 							<div class="tcd-title">
 								<h2>chrome extension</h2>
@@ -650,24 +653,19 @@ import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 										<li><span>Sveltekit</span></li>
 										<li><span>ruby on rails</span></li>
 										<li><span>Chrome Api</span></li>
-									
 									</ul>
-
-									
 								</div>
 							</section>
 						</seciton>
 						<seciton class="tci-direction"><img src={debugmatic} alt="" /></seciton>
-					</a >
+					</a>
 					<div class="tab-container-bg"></div>
 				</div>
-
-			
 			</div>
-            <div class="break-border border-l border-b" style="height: 55px;"></div>
-            <div class="tab-container-wrapper">
+			<div class="break-border border-l border-b" style="height: 55px;"></div>
+			<div class="tab-container-wrapper">
 				<div class="tab-container-item border-r border-b">
-					<a target="_blank" href="https://getequitool.com/"  class="tab-container-item-wrapper">
+					<a target="_blank" href="https://getequitool.com/" class="tab-container-item-wrapper">
 						<seciton class="tci-direction">
 							<div class="tcd-title">
 								<h2>assebility plugin</h2>
@@ -685,29 +683,32 @@ import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 										<li><span>Scss</span></li>
 										<li><span>chrome ex-api</span></li>
 									</ul>
-
-									
 								</div>
 							</section>
 						</seciton>
 						<seciton class="tci-direction"><img src={equitool} alt="" /></seciton>
-					</a >
+					</a>
 					<div class="tab-container-bg"></div>
 				</div>
-
-			
 			</div>
 		</section>
 	</div>
 </section>
 
 <section class="Showcase-container-tab main-width-center">
-	<div class="Showcase-container-tab-wrapper width-1500 border-l border-b" style="height: 55px;"></div>
+	<div
+		class="Showcase-container-tab-wrapper width-1500 border-l border-b"
+		style="height: 55px;"
+	></div>
 </section>
 
 <section class="ContactHome-section-4 main-width-center" style="margin-bottom: 0px;">
-	<a href="https://xettrialeen.medium.com/xettri-aleens-portfolio-dec1100b081e" target="_blank" class="ContactHome-section-wrapper-4 width-1500 ">
-        <section>
+	<a
+		href="https://xettrialeen.medium.com/xettri-aleens-portfolio-dec1100b081e"
+		target="_blank"
+		class="ContactHome-section-wrapper-4 width-1500"
+	>
+		<section>
 			<div class="Component-item-title custom-cursor border-r border-b">
 				<h2 class="">
 					<div class="component-item-transX"><span>More</span></div>
@@ -739,24 +740,44 @@ import htmlToFigma from '../../../assets/portfilio/htmlToFigma.png';
 			</div>
 			<div class="contactHome-bg" style="background-color: #9f24ff;"></div>
 		</section>
-        <section>
+		<section>
 			<div class="Component-item-title custom-cursor border-l border-b">
 				<h2 class="">
 					<div class="component-item-transX"><span>Projects?</span></div>
 					<div class="component-item-transX"><span>Projects?</span></div>
 				</h2>
 				<button>
-					<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M110.669 68L17.3371 68L17.3371 60L110.669 60L110.669 68Z" fill="black"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M106.669 60C87.855 60 72.4817 76.5448 72.4817 94.1869L72.4817 98.1869L80.4817 98.1869L80.4817 94.1869C80.4817 80.7918 92.4425 68 106.669 68L110.669 68L110.669 60L106.669 60Z" fill="black"/>
-						<path fill-rule="evenodd" clip-rule="evenodd" d="M106.669 68C87.855 68 72.4817 51.4552 72.4817 33.8131L72.4817 29.8131L80.4817 29.8131L80.4817 33.8131C80.4817 47.2082 92.4425 60 106.669 60L110.669 60L110.669 68L106.669 68Z" fill="black"/>
-					  </svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="128"
+						height="128"
+						viewBox="0 0 128 128"
+						fill="none"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M110.669 68L17.3371 68L17.3371 60L110.669 60L110.669 68Z"
+							fill="black"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M106.669 60C87.855 60 72.4817 76.5448 72.4817 94.1869L72.4817 98.1869L80.4817 98.1869L80.4817 94.1869C80.4817 80.7918 92.4425 68 106.669 68L110.669 68L110.669 60L106.669 60Z"
+							fill="black"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M106.669 68C87.855 68 72.4817 51.4552 72.4817 33.8131L72.4817 29.8131L80.4817 29.8131L80.4817 33.8131C80.4817 47.2082 92.4425 60 106.669 60L110.669 60L110.669 68L106.669 68Z"
+							fill="black"
+						/>
+					</svg>
 				</button>
 			</div>
 			<div class="contactHome-bg" style="background-color: #9f24ff;"></div>
 		</section>
-		
-    </a>
+	</a>
 </section>
 
 <style lang="scss">
